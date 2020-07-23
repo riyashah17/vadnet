@@ -55,6 +55,8 @@ RUN PIP_INSTALL="python -m pip --no-cache-dir install --upgrade" && \
         flask \
         flask_restful
 
+RUN PIP_INSTALL="python -m pip --no-cache-dir install --upgrade" && \
+$PIP_INSTALL numba==0.48
 WORKDIR /app
 COPY . /app
 ADD /vadnet-pkg /vadnet
